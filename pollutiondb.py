@@ -1,8 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[2236]:
-
 
 from tkinter import *
 import tkinter.simpledialog
@@ -14,22 +9,14 @@ import re
 import datetime
 
 
-# In[2237]:
-
-
 def validateName(s):
-     return bool(re.fullmatch('^[a-zA-z][a-zA-z\s]+',s.strip()))
+    return bool(re.fullmatch('^[a-zA-z][a-zA-z\s]+',s.strip()))
 
 
-# In[2238]:
 
 
 def validVehicleNumber1(s1):
-     return bool(re.match('[a-zA-Z]{2}[0-9]{2}[a-zA-Z]{1,2}[0-9]{4}$',s1))
-
-
-# In[2239]:
-
+    return bool(re.match('[a-zA-Z]{2}[0-9]{2}[a-zA-Z]{1,2}[0-9]{4}$',s1))
 
 def register(): 
     validform=True
@@ -102,16 +89,6 @@ def register():
                 year1.set("2020")
             
 
-
-# In[ ]:
-
-
-
-
-
-# In[2240]:
-
-
 def clear():
     name.set("")
     Phone.set("")
@@ -121,11 +98,7 @@ def clear():
     date1.set("1")
     month1.set("jan")
     year1.set("2020")
-           
-    
 
-
-# In[2241]:
 
 
 root=Tk()
@@ -136,17 +109,7 @@ screen_height=root.winfo_screenheight()
 x_cord =screen_width/2 -widthw/2
 y_cord = screen_height/2 - heightw/2
 root.geometry("%dx%d+%d+%d" % (widthw,heightw,x_cord,y_cord))
-# root.config(background="dark grey")
 root.title("Pollution_form")
-
-
-# In[ ]:
-
-
-
-
-
-# In[2242]:
 
 
 name = StringVar()
@@ -163,20 +126,8 @@ year1=StringVar()
 now=StringVar()
 
 
-# In[2243]:
-
 
 head=Label(root,text="Pollution DB",font=("arial",24,"bold")).grid(row=0,columnspan=4,padx=20,pady=10)
-
-
-# In[ ]:
-
-
-
-
-
-# In[2244]:
-
 
 lname = Label(root,text = "Name * ").grid(row=1,column=0)
 lPhone = Label(root,text = "Phn Number * ",).grid(row=2,column=0)
@@ -185,9 +136,6 @@ lVechilename= Label(root,text = "Vechile Number * ",).grid(row=4,column=0)
 lVechiclenumber = Label(root,text = "Vechile Name * ",).grid(row=5,column=0)
 lDOP = Label(root,text = "DATE of Pollution* ",).grid(row=6,column=0)
 lVupto=Label(root,text = "Valid Upto* ",).grid(row=7,column=0)
-
-
-# In[2245]:
 
 
 name_entry = Entry(root,textvariable = name, width = "30").grid(row=1,column=1)
@@ -224,64 +172,8 @@ droplist.config(width=10,bg = "light blue")
 year1.set("2020")
 droplist.grid(row=7,column=3,padx=0,pady=0)
 
-
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[2246]:
-
-
 register = Button(root,text = "Register",command=register ,width = "30", height = "2", bg = "light grey").grid(row=10,column=0,padx=20,pady=10,sticky=E)
 clear = Button(root,text = "Clear",command=clear ,width = "30", height = "2", bg = "light grey").grid(row=10,column=1,padx=20,pady=10,sticky=E)
 quit=Button(root,text = "quit",command=root.destroy ,width = "30", height = "2", bg = "light grey").grid(row=10,column=2,padx=20,pady=10,sticky=E)
 
-
-# In[2247]:
-
-
 root.mainloop()
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
